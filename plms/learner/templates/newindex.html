@@ -1,0 +1,107 @@
+{# Load the tag library #}
+{% load django_bootstrap5 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+.page-section {
+  padding: 8rem 0;
+}
+
+.text-white-75 {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+    .text-white-75 {
+      color: rgb(255, 255, 255) !important;
+    }
+
+    .btn-xl {
+      padding: 1.25rem 2.25rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 10rem;
+      background-color: rgb(255, 128, 0);
+    }
+
+    hr.divider {
+      height: 0.2rem;
+      max-width: 3.25rem;
+      margin: 1.5rem auto;
+      background-color: #fe6600;
+      opacity: 1;
+    }
+
+    header.masthead {
+      padding-top: 10rem;
+      padding-bottom: calc(10rem - 4.5rem);
+      /* background:"/; */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      background-size: cover;
+    }
+
+    /* #myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+} */
+    #myVideo {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+    }
+
+    /* Add some content at the bottom of the video/page */
+    .content {
+      position: fixed;
+      bottom: 0;
+      background: rgba(255, 115, 0, 0.251);
+      color: #f1f1f1;
+      width: 100%;
+      height: 100%;
+      padding: 20px;
+    }
+  </style>
+</head>
+<video autoplay muted loop id="myVideo">
+  <source src="/media/media/70226_Bachelor_s_stuff_background_HD_BG.mp4" type="video/mp4">
+</video>
+
+<body>
+    <div class="content">
+      <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+        <div class="col-lg-8 align-self-end">
+          <h1 class="text-white font-weight-bold">Learning Management System</h1>
+          <hr class="divider" />
+        </div>
+        <div class="col-lg-8 align-self-baseline">
+          <p class="text-white-75 mb-5">Start your journey towards a world class education</p>
+          <a class="btn btn-primary btn-xl" style="margin: 10px; padding-left: 80px; padding-right: 80px;"
+            href="{% url 'userlogin' %}"> Login </a>
+          <a class="btn btn-primary btn-xl" nstyle="margin: 10px;" href="{% url 'registers' %}">Register As Student</a>
+          <a class="btn btn-primary btn-xl" style="margin: 10px;" href="{% url 'registert' %}">Register As Teacher</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+</html>
